@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fafafa;
+    color: #212121;
+    line-height: 1.5;
+}
+
+input {
+    padding: 8px;
+    font: inherit;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+
+.gallery {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itemList {
+    margin-bottom: 10px;
+}
+
+.itemImg {
+    max-width: 700px;
+}
+
+
+.wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    width: 360px;
+    cursor: default;
+    background: linear-gradient(135deg, aqua, rgb(0, 255, 0), rgb(255, 255, 0), orange, red, rgb(255, 0, 234));
+    border-radius: 10px;
+    animation: animate 1.5s linear infinite;
+}
+
+.wrapper .display,
+.wrapper span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background: #1b1b1b;
+    border-radius: 6px;
+    height: 85px;
+    width: 345px;
+    text-align: center;
+
+}
+
+
+.wrapper .display #time {
+    font-size: 50px;
+    line-height: 85px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, aqua, rgb(0, 255, 0), rgb(255, 255, 0), orange, red, rgb(255, 0, 234));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.wrapper span {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 10px;
+}
+
+.wrapper span:first-child {
+    filter: blur(10px);
+}
+
+.wrapper span:last-child {
+    filter: blur(20px);
+}
